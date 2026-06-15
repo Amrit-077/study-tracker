@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+nav {
+  background-color: #222;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #61dafb;
+}
+
+.hero-image {
+  width: 350px;
+  margin-top: 20px;
+}
+
+.subject-card {
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.subject-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.subject-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 300px;
+  padding: 10px;
+}
