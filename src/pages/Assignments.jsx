@@ -1,15 +1,27 @@
 import { useState, useEffect } from "react";
 
+const defaultAssignments = [
+  "React Final Project",
+  "Java Programming Assignment",
+  "Database ER Diagram",
+  "Big Data Report",
+  "Prompt Engineering Practice"
+];
+
 function Assignments() {
   const [assignment, setAssignment] = useState("");
   const [assignments, setAssignments] = useState([]);
 
-  useEffect(() => {
-    const savedAssignments =
-      JSON.parse(localStorage.getItem("assignments")) || [];
+ useEffect(() => {
+  const savedAssignments =
+    JSON.parse(localStorage.getItem("assignments"));
 
+  if (savedAssignments) {
     setAssignments(savedAssignments);
-  }, []);
+  } else {
+    setAssignments(defaultAssignments);
+  }
+}, []);
 
   useEffect(() => {
     localStorage.setItem(

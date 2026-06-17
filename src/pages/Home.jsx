@@ -1,21 +1,38 @@
 import hero from "../assets/hero.png";
 
 function Home() {
+
+const studentName =
+  localStorage.getItem("studentName") || "Guest";
+
+const isLoggedIn =
+  localStorage.getItem("isLoggedIn");
+
+  const logout = () => {
+  localStorage.removeItem("studentName");
+  localStorage.removeItem("isLoggedIn");
+  window.location.reload();
+};
+<button onClick={logout}>
+  Logout
+</button>
+
   return (
-    <div className="home">
+    <div>
+
       <h1>Student Study Tracker</h1>
 
-      <img src={hero} alt="Hero" className="hero-image" />
+      <h2>Welcome {studentName}</h2>
 
-      <h2>Amrit Paudel & Aman Kumar Gupta</h2>
+<p>
+  Status:
+  {isLoggedIn ? " Logged In" : " Not Logged In"}
+</p>
+<h2>Developed By</h2>
 
-      <p>IT Engineering Students at Ulsan College</p>
+<p>Amrit Paudel</p>
+<p>Aman Kumar Gupta</p>
 
-      <p>
-        Welcome to our React Final Project.
-        This website helps students manage
-        subjects, assignments and study progress.
-      </p>
     </div>
   );
 }

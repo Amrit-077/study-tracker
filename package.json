@@ -2,14 +2,16 @@
   "name": "study-tracker",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Amrit-077.github.io/study-tracker"
+  "homepage": "https://Amrit-077.github.io/study-tracker",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
